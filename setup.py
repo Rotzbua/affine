@@ -32,7 +32,7 @@ setup(
     include_package_data=True,
     zip_safe=True,
     extras_require={
-        "test": ["pytest>=4.6", "pytest-cov"],
+        "test": ["pytest>=7.2", "pytest-cov"],
         "dev": ["pydocstyle", "flake8", "coveralls"],
     },
 )
