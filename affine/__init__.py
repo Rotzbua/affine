@@ -43,7 +43,7 @@ __all__ = ['Affine']
 __author__ = "Sean Gillies"
 __version__ = "2.3.1"
 
-EPSILON: float = 1e-5
+EPSILON: int = 1e-5
 
 
 class AffineError(Exception):
