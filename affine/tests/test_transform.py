@@ -38,7 +38,7 @@ import affine
 from affine import Affine, EPSILON
 
 
-def seq_almost_equal(t1, t2, error=0.00001) -> None:
+def seq_almost_equal(t1, t2, error: float = 0.00001) -> None:
     assert len(t1) == len(t2), f"{t1!r} != {t2!r}"
     for m1, m2 in zip(t1, t2):
         assert abs(m1 - m2) <= error, f"{t1!r} != {t2!r}"
@@ -492,8 +492,8 @@ def test_eccentricity_complex() -> None:
         math.sqrt(5) / 3
     )
     assert (
-        Affine.translation(32, -47) * Affine.rotation(77) * Affine.scale(2, 3)
-    ).eccentricity == pytest.approx(math.sqrt(5) / 3)
+                   Affine.translation(32, -47) * Affine.rotation(77) * Affine.scale(2, 3)
+           ).eccentricity == pytest.approx(math.sqrt(5) / 3)
 
 
 def test_rotation_angle() -> None:
