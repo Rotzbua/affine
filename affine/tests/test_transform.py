@@ -36,6 +36,7 @@ import pytest
 
 import affine
 from affine import Affine, EPSILON
+from typing import Iterator
 
 
 def seq_almost_equal(t1, t2, error: float = 0.00001) -> None:
@@ -338,7 +339,7 @@ class PyAffineTestCase(unittest.TestCase):
             def from_points(cls, points) -> None:
                 list(points)
 
-            def __iter__(self):
+            def __iter__(self) -> Iterator:
                 yield 0
 
         with pytest.raises(TypeError):
@@ -530,7 +531,7 @@ def test_mul_fallback_type_error() -> None:
     class TextPoint:
         """Iterable, but values trigger TypeError in Affine.__mul__."""
 
-        def __iter__(self):
+        def __iter__(self) -> Iterator:
             return ("1", "2")
 
         def __rmul__(self, other):
