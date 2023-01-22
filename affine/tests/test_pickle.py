@@ -9,7 +9,7 @@ from multiprocessing import Pool
 import affine
 
 
-def test_pickle():
+def test_pickle() -> None:
     a = affine.Affine(1, 2, 3, 4, 5, 6)
     assert pickle.loads(pickle.dumps(a)) == a
 
@@ -22,7 +22,7 @@ def _mp_proc(x):
     return x
 
 
-def test_with_multiprocessing():
+def test_with_multiprocessing() -> None:
     a1 = affine.Affine(1, 2, 3, 4, 5, 6)
     a2 = affine.Affine(6, 5, 4, 3, 2, 1)
     results = Pool(2).map(_mp_proc, [a1, a2])

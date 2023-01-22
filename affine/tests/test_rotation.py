@@ -3,7 +3,7 @@ import math
 from affine import Affine
 
 
-def test_rotation_angle():
+def test_rotation_angle() -> None:
     """A positive angle rotates a vector counter clockwise
 
     (1.0, 0.0):
@@ -27,7 +27,7 @@ def test_rotation_angle():
     assert round(y, 14) == round(math.sqrt(2.0) / 2.0, 14)
 
 
-def test_rotation_matrix():
+def test_rotation_matrix() -> None:
     """A rotation matrix has expected elements
 
     | cos(a) -sin(a) |
@@ -43,7 +43,7 @@ def test_rotation_matrix():
     assert rot.f == 0.0
 
 
-def test_rotation_matrix_pivot():
+def test_rotation_matrix_pivot() -> None:
     """A rotation matrix with pivot has expected elements"""
     rot = Affine.rotation(90.0, pivot=(1.0, 1.0))
     exp = (
