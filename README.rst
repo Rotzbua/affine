@@ -22,11 +22,21 @@ Usage
 The 3x3 augmented affine transformation matrix for transformations in two
 dimensions is illustrated below.
 
-::
+.. math::
 
-  | x' |   | a  b  c | | x |
-  | y' | = | d  e  f | | y |
-  | 1  |   | 0  0  1 | | 1 |
+    \begin{pmatrix}
+    x' \\ y' \\ 1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    a & b & c \\
+    d & e & f \\
+    0 & 0 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+    x \\ y \\ 1
+    \end{pmatrix}
+
 
 Matrices can be created by passing the values ``a, b, c, d, e, f`` to the
 ``affine.Affine`` constructor or by using its ``identity()``,
