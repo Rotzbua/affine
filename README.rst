@@ -24,18 +24,22 @@ dimensions is illustrated below.
 
 .. math::
 
-    \begin{pmatrix}
-    x' \\ y' \\ 1
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-    a & b & c \\
-    d & e & f \\
-    0 & 0 & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-    x \\ y \\ 1
-    \end{pmatrix}
+   \begin{bmatrix}
+     x' \\
+     y' \\
+     1
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+     a & b & c \\
+     d & e & f \\
+     0 & 0 & 1
+   \end{bmatrix}
+   \begin{bmatrix}
+     x \\
+     y \\
+     1
+   \end{bmatrix}
 
 
 Matrices can be created by passing the values ``a, b, c, d, e, f`` to the
